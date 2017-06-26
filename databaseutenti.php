@@ -87,9 +87,9 @@ if(strstr($msg,"/user ")&&in_array($username, $useriscritti)){
 }
 
 
-if(strstr($msg,"/database ")){
+if(strstr($msg,"/iscrivi ")){
   $descrizione = substr($msg, 10);
-  
+
   if(!preg_match ('/^([a-zA-Z0-9]+)$/', $descrizione)){
     sm($chatID,
     "ERRORE: inserisci nella ricerca username solo caratteri concessi: lettere e numeri");
@@ -108,4 +108,9 @@ if(strstr($msg,"/database ")){
       sm($chatID, "Prima di iscriverti a questo database, verifica di avere un Username, dalle impostazioni di Telegram!");
     }
   }
+
+  if(strstr($msg,"/database ")){
+    //$descrizione = substr($msg, 10);
+   sm($chatID,"Stampando database utenti \n");
+    while($row = mysql_fetch_array($tabella)){ sm($chatID,$row); }
 }

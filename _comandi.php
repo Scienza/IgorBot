@@ -14,16 +14,17 @@ Trovi le spiegazioni di tutti i comandi del bot qua: /comandi");
 if($msg=="/comandi" || $msg=="/help" ){
   sm($chatID, "I comandi principali sono:
 
-- /database -> Per l'iscrizione al Database
+- /iscrivi -> Per l'iscrizione al Database
 - /lista -> Per visualizzare l'elenco degli utenti iscritti
+- /database -> Per visualizzare il database degli utenti
 - /user -> Per cercare informazioni su un utente in particolare");
 }
 
 
 if($msg == "/database"){
-  sm($chatID, "Per iscriverti al Database, digita /database seguito da una breve descrizione del tuo ambito di studio o lavorativo.
+  sm($chatID, "Per iscriverti al Database, digita /iscrivi seguito da una breve descrizione del tuo ambito di studio o lavorativo.
 
-Ex. /database Quinto Anno, Liceo Scientifico");
+Ex. /iscrivi Quinto Anno, Liceo Scientifico");
 }
 
 
